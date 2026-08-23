@@ -1,4 +1,3 @@
-cat > assistant.py <<'PY'
 from google import genai
 import os
 
@@ -16,4 +15,3 @@ while True:
     )
 
     print("المساعد:", response.text)
-PY
