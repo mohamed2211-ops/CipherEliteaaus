@@ -1,5 +1,1 @@
-wget https://github.com/mozilla/geckodriver/releases/download/v0.34.0/geckodriver-v0.34.0-linux64.tar.gz
-tar -xvzf geckodriver-v0.34.0-linux64.tar.gz
-chmod +x geckodriver
-mv geckodriver /usr/local/bin/
-rm geckodriver-v0.34.0-linux64.tar.gz
+python3 -c "from selenium import webdriver; from selenium.webdriver.firefox.service import Service; s=Service('/usr/local/bin/geckodriver'); d=webdriver.Firefox(service=s); print('okkk firefox'); d.quit()"
