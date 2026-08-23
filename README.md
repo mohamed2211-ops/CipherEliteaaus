@@ -1,17 +1,5 @@
-from google import genai
-import os
-
-client = genai.Client(api_key=os.environ.get("GEMINI_API_KEY"))
-
-while True:
-    user = input("أنت: ")
-
-    if user.lower() in ["exit", "quit", "خروج"]:
-        break
-
-    response = client.models.generate_content(
-        model="gemini-3.6-flash",
-        contents=user
-    )
-
-    print("المساعد:", response.text)
+wget https://github.com/mozilla/geckodriver/releases/download/v0.34.0/geckodriver-v0.34.0-linux64.tar.gz
+tar -xvzf geckodriver-v0.34.0-linux64.tar.gz
+chmod +x geckodriver
+mv geckodriver /usr/local/bin/
+rm geckodriver-v0.34.0-linux64.tar.gz
