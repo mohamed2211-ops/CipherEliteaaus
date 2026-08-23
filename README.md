@@ -1,4 +1,3 @@
-cat << 'EOF' > assistant.py
 import os
 from google import genai
 
@@ -15,4 +14,3 @@ while True:
     )
 
     print("المساعد:", response.text)
-EOF
