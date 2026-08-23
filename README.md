@@ -1,1 +1,1 @@
-python3 -c "from selenium import webdriver; from selenium.webdriver.firefox.service import Service; s=Service('/usr/local/bin/geckodriver'); d=webdriver.Firefox(service=s); print('okkk firefox'); d.quit()"
+python3 -c "from selenium import webdriver; from selenium.webdriver.firefox.options import Options; from selenium.webdriver.firefox.service import Service; opt=Options(); opt.add_argument('--headless'); s=Service('/usr/local/bin/geckodriver'); d=webdriver.Firefox(service=s, options=opt); print('okkk firefox headless'); d.quit()"
